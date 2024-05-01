@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Life2vec death calculator offers an AI-powered way to learn when you will die">
+    <meta name="keywords" content="life2vec">
+    <title>Life2vec</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+        }
+        #top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            height: 75px;
+            padding: 0 3rem;
+            opacity: 0.5;
+        }
+        nav ul li {
+            color: black;
+            list-style-type: none;
+            margin: 30px;
+            font-weight: bold;
+            margin-top: 50px;
+        }
+        #logo img {
+            height: 70px;
+            border-radius: 10px;
+            flex: wrap;
+            margin-top: 15px;
+        }
+        nav ul {
+            display: flex;
+            margin-left: -10%;
+        }
+        nav ul li a {
+            position: relative;
+            display: block;
+            padding: 4px 0;
+            font-family: Lato, sans-serif;
+            color: #2f3030;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: transform 0.5s;
+        }
+        
+        
+   
+    #top:hover{
+
+    opacity: 1;
+}
+
+    
+     #cover-image {
+    position: relative;
+    width: 80%;
+    height: 700px; /* Adjust height as needed */
+    overflow: hidden;
+    margin: 0 auto; /* Add this to center the container horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cover-image img {
+    max-width: 100%; /* Ensure the image doesn't exceed the container width */
+    max-height: 100%; /* Ensure the image doesn't exceed the container height */
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Change to 'contain' to fit the entire image within the container */
+}
+
+        #button-container {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #button {
+            background-color: #fff; /* Green */
+            border: none;
+            color: #333;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 20px;
+            cursor: hand;
+        }
+        
+    .one h1{
+        
+           text-align:center;
+        
+    }
+    
+    .one p{
+        
+        
+      
+         
+        text-align:center;
+         font-size: 17px;
+         line-height: 140%;
+      WIDTH:60%;
+    }
+    
+    .two {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.two h1 {
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+}
+
+
+   .four {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.four h1 {
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+}
+
+
+
+
+.three {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.three ul {
+
+  padding: 0;
+}
+
+.three li {
+  margin-bottom: 10px;
+  margin-left:150px;
+}
+
+.three li strong {
+  color: #333;
+}
+
+   .five {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.five h1 {
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+}
+
+   .six {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.six h1 {
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+}
+
+   .sevan {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sevan h1 {
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+}
+
+   .eight {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.eight h1 {
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+}
+
+.eight p {
+  color: #333;
+  font-size: 16px;
+  text-align: center;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <form action="https://life2vec.in/">
+            <div id="top">
+                <div id="logo">
+                    <img src="logo.png" alt="Logo">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a style="margin-top: -3%;" href="#">AI DATA</a></li>
+                        <li><a href="#">NEWS</a></li>
+                        <li><a href="#">INDUSTRY</a></li>
+                        <li><a href="#">MACHINE LEARNING</a></li>
+                        <li style="margin-top: 6.9%;">Download</li>
+                    </ul>
+                </nav>
+            </div>
+      </header>
+    <br>
+    <br>
+
+    <div id="cover-image">
+        <center><img src="image_cover.png" alt="Cover Image"></center>
+        <div id="button-container">
+            <button id="button">Calculate Your Age</button>
+        </div>
+    </div>
+   </form>
+  <br>
+   <br>
+  <section>
+      
+      <div class="one">
+          <h1>Get to Know: The Life2Vec</h1>
+          <BR>
+          <center><p>The Life2Vec AI tool is like a computer program that guesses how long you might live or when you might pass away. 
+          It looks at things like how you live and your health to make its guess. It uses special computer tricks called algorithms to do this and tells you what it thinks about how long you might live.</p></center>
+          
+          
+      </div>
+      
+      <br>
+      <br>
+      
+      <div class="two">
+          
+          <h1>Understanding Life2Vec: Its Important Features</h1>
+          
+            </div>
+            <div class="three">
+                
+                <ul>
+                    <li>
+                        <strong>Personalized Predictions:</strong> Life2Vec predicts how long you might live based on your health and habits.
+                        </li><br>
+             <li><strong>Considers Many Factors:</strong> It looks at things like your age, gender, health history, and lifestyle choices to make its prediction.</li><br>
+             <li><strong>Easy to Use:</strong> You just input your information, and Life2Vec quickly gives you its prediction.</li><br>
+             <li><strong>Health Tips:</strong> Life2Vec offers suggestions on how to improve your health and live longer.</li><br>
+             <li><strong>Privacy Protection:</strong> Your information is kept safe and private when you use Life2Vec.</li><br>
+             <li><strong>Regular Updates:</strong> Life2Vec is updated regularly to provide the most accurate predictions.</li>
+             
+                </ul>
+            </div>
+      
+      </section>
+
+
+ <middle>
+     <div class="four">
+         
+         <h1>How does the AI Death Calculator work?</h1>
+         
+     </div>
+     
+      <div class="three">
+                
+                <ul>
+                    <li>
+                        <strong>Algorithm Analysis:</strong> The calculator uses special math formulas to look at this information and compare it with lots of health data and research.
+                        </li><br>
+             <li><strong>Information Input:</strong> Users fill out a questionnaire with details like their age, weight, height, how much they eat, how active they are, and how long they think they'll live.</li><br>
+             <li><strong>Life Expectancy Estimate:</strong> Based on all that info, the calculator guesses how long you might live. It might give you a range or an average.</li><br>
+             <li><strong>Extra Tips:</strong>Some calculators don't just tell you how long you might live, they also give you advice on how to stay healthy and live longer, based on what you told them.</li><br>
+             
+              </ul>
+            </div>
+      </middle>
+
+  
+  <phase-3>
+      
+      <div class="five">
+           
+           <h1>Where can I find an AI Death Calculator to see how long I might live?</h1>
+          
+      </div>
+      
+         <div class="three">
+                
+                <ul>
+                    <li>
+                        Look for an AI Death Calculator online, usually on health websites.
+                        </li><br>
+             <li> Fill in details about yourself like age, weight, height, how much you eat, how active you are, and any health issues.</li><br>
+             <li>The calculator uses special math to compare your info with lots of health data.</li><br>
+             <li>It then gives you an estimate of how long you might live, maybe as a range or an average.</li><br>
+             <li>Some calculators also give you tips on staying healthy based on what you told them.</li><br>
+             <li>Remember, these are just for fun and motivation. They're not exact predictions, so focus on living well instead of worrying about the number.</li><br>
+             
+              </ul>
+            </div>
+      
+  </phase-3>
+  
+  <phase-4>
+      
+      <div class="six">
+          
+          <h1>How can LifeVac be used to save someone who is choking?</h1>
+          
+          </div>
+    
+          <div class="three">
+                
+                <ul>
+                    <li>
+                        <strong>Get Ready:</strong> Make sure the LifeVac device is assembled and nearby.
+                        </li><br>
+             <li><strong>Check the Person:</strong>If someone is choking and can't breathe, use LifeVac.</li><br>
+             <li><strong>Seat Them:</strong> Have them sit or stand up straight.</li><br>
+             <li><strong>Put on the Mask:</strong>Place the mask over their mouth and nose, making a tight seal.</li><br>
+             <li><strong>Push the Plunger:</strong>Press down firmly and quickly on the plunger to create suction.</li><br>
+             <li><strong>Watch Them:</strong>If the object blocking their airway comes out, they should start breathing again. If not, repeat or call for help.
+</li><br>
+               <li><strong>Get Help:</strong>Even if the choking stops, it's important to see a doctor afterward.</li><br>
+             
+             
+              </ul>
+            </div>
+    
+     </phase-4>
+  
+  <phase-5>
+      
+       <div class="sevan">
+          
+          <h1>Simple Ways to Live Longer</h1>
+          
+          </div>
+      
+      
+        <div class="three">
+                
+               <ul>
+  <li><strong>Eat Healthy:</strong> Focus on a balanced diet rich in fruits, vegetables, whole grains, and lean proteins. Limit processed foods and sugary drinks.</li><br>
+  <li><strong>Stay Active:</strong> Incorporate regular physical activity into your routine, aiming for at least 30 minutes most days. Find activities you enjoy, like walking, swimming, or dancing.</li><br>
+  <li><strong>Don't Smoke:</strong> If you smoke, quit. Smoking can significantly decrease your life expectancy and increase your risk of various diseases.</li><br>
+  <li><strong>Limit Alcohol:</strong> Drink alcohol in moderation, if at all. Excessive alcohol consumption can harm your health and shorten your lifespan.</li><br>
+  <li><strong>Manage Stress:</strong> Find healthy ways to cope with stress, such as meditation, deep breathing exercises, or hobbies you enjoy.</li><br>
+  <li><strong>Get Enough Sleep:</strong> Aim for 7-8 hours of quality sleep each night. Poor sleep can affect your physical and mental health.</li><br>
+  <li><strong>Stay Connected:</strong> Maintain social connections with friends, family, and community. Strong social support is linked to better health and longevity.</li><br>
+  <li><strong>Stay Safe:</strong> Take precautions to prevent accidents and injuries. Wear seat belts, follow safety guidelines, and avoid risky behaviors.</li><br>
+  <li><strong>Stay Positive:</strong> Cultivate a positive outlook on life. Focus on gratitude, optimism, and resilience in facing challenges.</li><br>
+  <li><strong>Regular Check-ups:</strong> Visit your healthcare provider for regular check-ups and screenings. Early detection and treatment of health issues can improve outcomes and extend life.</li><br>
+</ul>
+
+            </div>
+    
+       </phase-5>
+       
+   <phase-6>
+       
+       
+           <div class="eight">
+    	
+    	<h1>Conclusion</h1><br>
+    	 	<p>If you’re intrigued by the prospect of peeking into your potential lifespan, choose an AI calculator wisely.Pick one with a transparent methodology and remember –
+    	 	it’s about insights, not certainties. Dive in, explore, and let the information guide you toward a healthier and, who knows, potentially longer life!
+</p
+  </div>
+       
+       
+   </phase-6>    
+    
+
+
+
+</body>
+</html>
